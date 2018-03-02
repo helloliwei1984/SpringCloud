@@ -1,0 +1,24 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://root:root@localhost:8761/eureka/
+
+server:
+  port: 8080
+
+spring:
+  application:
+    name: service-admin
+
+
+management:
+     security:
+        enabled: false
+
+info:
+   app:
+       name: "@project.name@"  #从pom.xml中获取,pom.xml中需build中加入插件spring-boot-maven-plugin
+       description: "@project.description@"
+       version: "@project.version@"
+       spring-boot-version: "@project.parent.version@"
+

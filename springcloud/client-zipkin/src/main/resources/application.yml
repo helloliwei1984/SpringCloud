@@ -1,0 +1,10 @@
+#spring.application.name=service-hi
+#server.port=8988
+#spring.zipkin.base-url=http://localhost:9411
+server:
+  port: 8988
+spring:
+  application:
+    name: service-zipkin
+  zipkin:
+    base-url: http://localhost:9411

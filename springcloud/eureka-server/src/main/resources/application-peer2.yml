@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: peer2
+server:
+  port: 8769
+
+eureka:
+  instance:
+    hostname: peer2
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://root:root@peer2:8769/eureka/,http://root:root@peer1:8761/eureka/
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 4000
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
+
+
